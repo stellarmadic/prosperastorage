@@ -1,0 +1,499 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #6366f1;
+    --primary-dark: #4f46e5;
+    --secondary-color: #10b981;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --bg-light: #f9fafb;
+    --bg-white: #ffffff;
+    --border-color: #e5e7eb;
+    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background-color: var(--bg-white);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.hero-features {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.feature-item .icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Section Styles */
+section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Benefits Section */
+.benefits {
+    background-color: var(--bg-light);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.benefit-card {
+    background-color: var(--bg-white);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.benefit-card p {
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+/* How It Works Section */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.step {
+    text-align: center;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 1rem;
+}
+
+.step h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.step p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Pricing Section */
+.pricing {
+    background-color: var(--bg-light);
+}
+
+.pricing-table {
+    overflow-x: auto;
+    margin-top: 2rem;
+}
+
+.pricing-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-white);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.pricing-table th,
+.pricing-table td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.pricing-table thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.pricing-table th {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.pricing-table td {
+    font-size: 0.95rem;
+}
+
+.pricing-table th.popular,
+.pricing-table td.popular {
+    background-color: #fef3c7;
+    color: var(--text-dark);
+    font-weight: 600;
+    position: relative;
+}
+
+.pricing-table thead th.popular {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.pricing-table tbody tr:hover {
+    background-color: var(--bg-light);
+}
+
+.pricing-notes {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.pricing-note {
+    background-color: var(--bg-white);
+    padding: 1rem;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 0.5rem;
+}
+
+.pricing-note strong {
+    color: var(--primary-color);
+}
+
+.pricing-note small {
+    color: var(--text-light);
+}
+
+/* FAQ Section */
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.faq-item {
+    background-color: var(--bg-white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.faq-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+
+.faq-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+}
+
+.contact .section-title,
+.contact .section-subtitle {
+    color: white;
+}
+
+.contact-options {
+    margin-top: 2rem;
+}
+
+.contact-alt {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.contact-alt a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--text-dark);
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.footer-section p,
+.footer-section ul {
+    color: #9ca3af;
+    line-height: 1.8;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #374151;
+    color: #9ca3af;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-features {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .benefits-grid,
+    .steps-grid,
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-table {
+        font-size: 0.85rem;
+    }
+    
+    .pricing-table th,
+    .pricing-table td {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 3rem 0;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.75rem;
+    }
+    
+    section {
+        padding: 3rem 0;
+    }
+}
