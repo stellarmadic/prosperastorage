@@ -151,6 +151,17 @@ a:hover {
     overflow: hidden;
 }
 
+/* Compact Hero for Landing Page */
+.hero-compact {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    overflow: hidden;
+}
+
 .hero-bg {
     position: absolute;
     top: 0;
@@ -207,6 +218,94 @@ a:hover {
     margin-top: 60px;
 }
 
+/* Compact Storage Options */
+.storage-options-compact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-cta-text {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.storage-option-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 0, 102, 0.3);
+    border-radius: 12px;
+    padding: 35px 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+}
+
+.storage-option-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--neon-pink), var(--neon-cyan));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.storage-option-card:hover::before {
+    transform: scaleX(1);
+}
+
+.storage-option-card:hover {
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 30px rgba(255, 0, 102, 0.3);
+    transform: translateY(-5px);
+}
+
+.storage-option-card .card-icon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.storage-option-card h3 {
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.storage-option-card .short-title {
+    color: var(--neon-cyan);
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.storage-option-card .arrow {
+    font-size: 1.5rem;
+    color: var(--neon-pink);
+    transition: transform 0.3s ease;
+    display: block;
+    margin-top: 10px;
+}
+
+.storage-option-card:hover .arrow {
+    transform: translateX(5px);
+}
+
 .storage-card {
     background: var(--bg-card);
     border: 1px solid rgba(255, 0, 102, 0.3);
@@ -254,6 +353,15 @@ a:hover {
 .storage-card p {
     color: var(--text-secondary);
     margin-bottom: 30px;
+}
+
+.storage-card .short-title {
+    color: var(--neon-cyan);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
 }
 
 /* Buttons */
