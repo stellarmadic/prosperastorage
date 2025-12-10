@@ -993,19 +993,112 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .glitch {
-        font-size: 2.5rem;
+    /* Header adjustments */
+    .header {
+        padding: 10px 0;
     }
     
-    h2 {
-        font-size: 2rem;
+    .header .container {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .logo {
+        text-align: center;
+    }
+    
+    .logo h1 {
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+    
+    .logo .tagline {
+        font-size: 0.6rem;
+        letter-spacing: 2px;
     }
     
     .nav {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
     }
     
+    .nav a {
+        font-size: 0.7rem;
+        padding: 6px 12px;
+        letter-spacing: 0.5px;
+    }
+    
+    .btn-nav {
+        padding: 6px 12px;
+        font-size: 0.7rem;
+    }
+    
+    /* Hero compact adjustments */
+    .hero-compact {
+        min-height: auto;
+        padding: 40px 20px 60px;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+    }
+    
+    .glitch {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        line-height: 1.2;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.95rem;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero-cta-text {
+        font-size: 0.85rem;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    
+    /* Storage options compact */
+    .storage-options-compact {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 30px;
+    }
+    
+    .storage-option-card {
+        padding: 30px 20px;
+    }
+    
+    .storage-option-card .card-icon {
+        font-size: 3rem;
+    }
+    
+    .storage-option-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .storage-option-card .short-title {
+        font-size: 0.9rem;
+    }
+    
+    /* General adjustments */
     .storage-options {
         grid-template-columns: 1fr;
     }
@@ -1025,19 +1118,114 @@ section {
     .faq-grid {
         grid-template-columns: 1fr;
     }
+    
+    /* Footer adjustments */
+    .footer {
+        padding: 40px 15px 20px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
+    /* Even smaller screens */
+    .header {
+        padding: 8px 0;
+    }
+    
+    .logo h1 {
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .logo .tagline {
+        font-size: 0.55rem;
+    }
+    
+    .nav {
+        gap: 6px;
+    }
+    
+    .nav a {
+        font-size: 0.65rem;
+        padding: 5px 10px;
+    }
+    
+    .btn-nav {
+        padding: 5px 10px;
+        font-size: 0.65rem;
+    }
+    
+    .hero-compact {
+        padding: 30px 15px 50px;
+    }
+    
     .glitch {
-        font-size: 2rem;
-        letter-spacing: 2px;
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
+        margin-bottom: 12px;
     }
     
     .hero-subtitle {
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .hero-description {
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .hero-cta-text {
+        font-size: 0.75rem;
+        margin-top: 15px;
+        margin-bottom: 12px;
+    }
+    
+    .storage-options-compact {
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .storage-option-card {
+        padding: 20px 15px;
+    }
+    
+    .storage-option-card .card-icon {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .storage-option-card h3 {
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+    }
+    
+    .storage-option-card .short-title {
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+        margin-bottom: 15px;
+    }
+    
+    .storage-option-card .arrow {
         font-size: 1.2rem;
+        margin-top: 8px;
     }
     
     section {
-        padding: 60px 20px;
+        padding: 30px 15px;
+    }
+    
+    .btn-large {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+    
+    .footer {
+        padding: 30px 15px 15px;
     }
 }
