@@ -808,6 +808,66 @@ section {
     color: var(--text-secondary);
 }
 
+/* Box Examples */
+.box-examples {
+    background: var(--bg-secondary);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 217, 255, 0.2);
+    margin-bottom: 30px;
+}
+
+.box-examples h3 {
+    color: var(--neon-cyan);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.box-examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.box-example-item {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 6px;
+    border-left: 2px solid var(--neon-pink);
+}
+
+.box-example-item h4 {
+    color: var(--neon-pink);
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.box-dims {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.box-example-item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.box-example-item li {
+    color: var(--text-secondary);
+    padding: 5px 0;
+    font-size: 0.9rem;
+    position: relative;
+    padding-left: 15px;
+}
+
+.box-example-item li:before {
+    content: '•';
+    color: var(--neon-cyan);
+    position: absolute;
+    left: 0;
+}
+
 /* Coming Soon */
 .coming-soon {
     background: var(--bg-primary);
