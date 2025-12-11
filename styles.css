@@ -808,6 +808,17 @@ section {
     color: var(--text-secondary);
 }
 
+/* Quick CTA */
+.quick-cta {
+    background: var(--bg-primary);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.quick-cta .btn-large {
+    display: inline-block;
+}
+
 /* Box Examples */
 .box-examples {
     background: var(--bg-secondary);
