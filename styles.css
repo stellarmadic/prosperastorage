@@ -825,7 +825,7 @@ section {
 
 .box-examples-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
@@ -1179,6 +1179,11 @@ section {
         grid-template-columns: 1fr;
     }
     
+    /* Box examples adjustments */
+    .box-examples-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
     /* Footer adjustments */
     .footer {
         padding: 40px 15px 20px;
@@ -1287,5 +1292,14 @@ section {
     
     .footer {
         padding: 30px 15px 15px;
+    }
+    
+    /* Box examples adjustments */
+    .box-examples-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .box-examples {
+        padding: 20px 15px;
     }
 }
