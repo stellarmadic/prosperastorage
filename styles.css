@@ -819,6 +819,31 @@ section {
     display: inline-block;
 }
 
+/* Coming Soon Notice */
+.coming-soon-notice {
+    background: var(--bg-secondary);
+    padding: 60px 40px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 40px 0;
+    border: 2px solid var(--primary);
+}
+
+.coming-soon-notice h3 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.coming-soon-notice p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 /* Box Examples */
 .box-examples {
     background: var(--bg-secondary);
